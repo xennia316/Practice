@@ -1,0 +1,19 @@
+.body {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display {
+    width: 50vw;
+    height: 10vw;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 24px;
+    font-weight: 500;
+}
