@@ -1,0 +1,24 @@
+.But {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.equal {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(60, 35, 107);
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    height: 5vh;
+    font-size: 32px;
+}
+
+.fullCalc {
+    width: 18vw;
+    margin: 05rem auto;
+    border: 2px solid #eee;
+    padding: .5rem;
+    background-color: #eee;
+}
