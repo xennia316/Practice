@@ -1,12 +1,15 @@
 import "./App.css";
-import Button from "./Buttons/Button.jsx";
 import FullPage from "./FullPage";
+import ButtonSection from "./ButtonSection";
+import styles from "./ButtonSection.module.css";
 
 function App() {
   return (
     <div className="App">
-      {/* <Button /> */}
-      <FullPage />
+      <section className={styles.fullCalc}>
+        <FullPage />
+        <ButtonSection />
+      </section>
     </div>
   );
 }
