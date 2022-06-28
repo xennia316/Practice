@@ -5,56 +5,68 @@ import styles from "./FullPage.module.css";
 
 const FullPage = () => {
   const [number, setNumber] = useState(0);
-  const [number2, setNumber2] = useState(0);
   const [finale, setFinale] = useState(0);
-  const [arrNumbers, setarrNumbers] = useState([]);
+  const [arrNumbers, setArrNumbers] = useState([]);
+
+  useEffect(() => {
+    console.log("current number array: ", arrNumbers);
+    console.log("current final array", finale);
+  }, [arrNumbers]);
+
+  const clear = () => {
+    setNumber(0);
+    setArrNumbers([]);
+    setFinale(0);
+  };
 
   const handler = (e) => {
     e.preventDefault();
     let i = e.target.innerText;
     let temp = [...arrNumbers, i];
-    setarrNumbers(temp);
-    setNumber(i);
+    let a = temp.reduce((prev, curr) => prev + curr);
+    setArrNumbers(temp);
+    setNumber(a);
   };
-
-  useEffect(() => {
-    console.log(arrNumbers);
-  }, [arrNumbers]);
-
-  const clear = () => {
-    setarrNumbers([]);
-    setFinale(0);
-  };
-
-  const adder = () => {
-    setFinale(number + number2);
-    console.log(finale);
+  const calculate = () => {
+    console.log(number);
+    console.log(typeof number);
+    let a = eval(number);
+    setFinale(a);
+    console.log(a);
   };
 
   const listOfButtons = [
+    { value: "√", id: "op" },
     { value: 1, id: "num" },
     { value: 2, id: "num" },
     { value: 3, id: "num" },
+    { value: "+", id: "op" },
     { value: 4, id: "num" },
     { value: 5, id: "num" },
     { value: 6, id: "num" },
+    { value: "-", id: "op" },
     { value: 7, id: "num" },
     { value: 8, id: "num" },
     { value: 9, id: "num" },
+    { value: "x", id: "op" },
     { value: 0, id: "num" },
+    { value: "∙", id: "op" },
+    { value: "%", id: "op" },
+    { value: "÷", id: "op" },
+    { value: "(", id: "op", onClick: handler },
+    { value: ")", id: "op", onClick: handler },
+    { value: "PI", id: "op", onClick: handler },
+    { value: "^", id: "op", onClick: handler },
+    { value: "sin", id: "op", onClick: handler },
+    { value: "cos", id: "op", onClick: handler },
+    { value: "tan", id: "op" },
+    { value: "|", id: "op" },
   ];
 
   const listOfOperations = [
-    { value: "+", id: "op", onClick: adder },
-    { value: "-", id: "op" },
-    { value: "x", id: "op" },
-    { value: "/", id: "op" },
+    { value: "±", id: "op", onClick: handler },
     { value: "CLR", id: "op", onClick: clear },
-    { value: "DEL", id: "op" },
-    { value: "%", id: "op" },
-    { value: ".", id: "op" },
-    { value: "( )", id: "op" },
-    { value: "+/-", id: "op" },
+    { value: "DEL", id: "op", onClick: clear },
   ];
 
   const inputs = listOfButtons.map((buttons, index) => {
@@ -68,14 +80,17 @@ const FullPage = () => {
     <div className={styles.body}>
       <section className={styles.display}>
         <p>{arrNumbers}</p>
+        <p>{finale}</p>
       </section>
       <section className={styles.buttonSection}>
         <section className={styles.Numbers}>
           <div className={styles.But}>
-            {inputs}
             {Operations}
+            {inputs}
           </div>
-          <button className={styles.equal}>=</button>
+          <button onClick={calculate} className={styles.equal}>
+            =
+          </button>
         </section>
         <section className={styles.Operations}></section>
       </section>
