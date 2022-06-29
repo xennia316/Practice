@@ -1,23 +1,32 @@
 .buttonBody {
-    background-color: black;
-    width: 3rem;
+    width: 3.25rem;
     height: 3rem;
-    border-radius: 10px;
+    border-radius: 50%;
     margin: .5rem;
 }
 
-.button {
+.button,
+.button1 {
     height: 100%;
     width: 100%;
-    background-color: rgb(60, 35, 107);
+    bbackdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: -1px 1px 1px #E4E7E8;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 50%;
     border: none;
     text-align: center;
 }
 
+.button1 {
+    display: none;
+}
+
 .buttonText {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
+    color: #e37d2f;
     text-align: center;
 }
