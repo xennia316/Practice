@@ -19,6 +19,17 @@ const FullPage = () => {
     setFinale(0);
   };
 
+  const Delete = () => {
+    let n = arrNumbers.pop();
+    setFinale(n);
+  };
+
+  const minus = () => {
+    let n = arrNumbers.unshift("-1*");
+    let str = eval(n);
+    setFinale(str);
+  };
+
   const handler = (e) => {
     e.preventDefault();
     let i = e.target.innerText;
@@ -36,7 +47,6 @@ const FullPage = () => {
   };
 
   const listOfButtons = [
-    { value: "√", id: "op" },
     { value: 1, id: "num" },
     { value: 2, id: "num" },
     { value: 3, id: "num" },
@@ -53,6 +63,11 @@ const FullPage = () => {
     { value: ".", id: "op" },
     { value: "%", id: "op" },
     { value: "/", id: "op" },
+  ];
+
+  const listOfOperations = [
+    { value: "±", id: "op", onClick: minus },
+    { value: "√", id: "op" },
     { value: "(", id: "op" },
     { value: ")", id: "op" },
     { value: "PI", id: "op" },
@@ -63,11 +78,21 @@ const FullPage = () => {
     { value: "|", id: "op" },
   ];
 
-  const listOfOperations = [
-    { value: "±", id: "op", onClick: handler },
+  const deletersList = [
     { value: "CLR", id: "op", onClick: clear },
-    { value: "DEL", id: "op", onClick: clear },
+    { value: "DEL", id: "op", onClick: Delete },
   ];
+
+  const deleters = deletersList.map((buttons, index) => {
+    return (
+      <Button
+        className={styles.delButtons}
+        key={index}
+        value={buttons.value}
+        onClick={buttons.onClick}
+      />
+    );
+  });
 
   const inputs = listOfButtons.map((buttons, index) => {
     return <Button key={index} value={buttons.value} onClick={handler} />;
@@ -81,17 +106,16 @@ const FullPage = () => {
       <section className={styles.display}>
         <p>{arrNumbers}</p>
         <p>{finale}</p>
+        <div className={styles.del}>{deleters}</div>
       </section>
       <section className={styles.buttonSection}>
         <section className={styles.Numbers}>
-          <div className={styles.But}>
-            {Operations}
-            {inputs}
-          </div>
-          <button onClick={calculate} className={styles.equal}>
-            =
-          </button>
+          <div className={styles.But}>{inputs}</div>
+          <div className={styles.But1}>{Operations}</div>
         </section>
+        <button onClick={calculate} className={styles.equal}>
+          =
+        </button>
         <section className={styles.Operations}></section>
       </section>
     </div>
