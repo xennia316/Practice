@@ -7,9 +7,9 @@
 }
 
 .display {
-    width: 17rem;
+    width: 100%;
     margin: 0 .5rem 1rem;
-    height: 20vw;
+    height: 30vh;
     color: #e4e7e8;
     /* border: 2px solid black; */
     /* border-radius: 15px; */
@@ -17,9 +17,10 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: right;
-    font-size: 32px;
+    font-size: 64px;
     font-weight: 500;
     overflow: scroll;
+    overflow-wrap: break-word;
     /* background-color: #fff; */
 }
 
@@ -27,11 +28,13 @@
 .But1 {
     display: grid;
     grid-template-columns: repeat(4, auto);
+    gap: 0;
+    height: 70%;
 }
 
-.But1 {
+/* .But1 {
     display: none;
-}
+} */
 
 .equal {
     margin: 2rem auto 1rem;
@@ -46,13 +49,114 @@
     font-size: 32px;
 }
 
-/* .Numbers {
+.Numbers {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-} */
+    height: 60%;
+}
+
 .del {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    margin: 0 1rem;
+}
+
+/* @media screen and (min-width: 415px) {
+    .But1 {
+        display: grid;
+    }
+
+    .display {
+        height: 30vh;
+        width: 100%;
+        font-size: 54px;
+    }
+
+    .equal {
+        width: 95%;
+        height: 7vh;
+    }
+
+    .Numbers {
+        height: 70vh;
+    }
+}
+*/
+
+@media screen and (max-width: 1281px) {
+    .Numbers {
+        height: 35vh;
+    }
+
+    .But1 {
+        display: grid;
+    }
+
+    .equal {
+        height: 50px;
+    }
+
+    .display {
+        font-size: 48px;
+        height: 25vh;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .Numbers {
+        height: 30vh;
+    }
+
+    .equal {
+        height: 45px;
+        margin: 3.5rem 0;
+    }
+
+    .display {
+        font-size: 32px;
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .Numbers {
+        height: 38vh;
+    }
+
+    .equal {
+        height: 50px;
+        margin: 3.5rem 0;
+    }
+
+    .But1 {
+        display: none;
+    }
+
+    .display {
+        font-size: 32px;
+        height: 25vh;
+    }
+}
+
+@media screen and (max-width: 281px) {
+    .Numbers {
+        height: 38vh;
+    }
+
+    .equal {
+        height: 50px;
+        margin: 3.5rem 0;
+    }
+
+    .But1 {
+        display: none;
+    }
+
+    .display {
+        font-size: 32px;
+        height: 20vh;
+    }
 }

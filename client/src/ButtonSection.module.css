@@ -1,13 +1,59 @@
-.But {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-}
-
 .fullCalc {
-    width: 18rem;
-    margin: 05rem auto;
+    width: 42vw;
+    overflow: hidden;
+    height: 95vh;
+    margin: 0 auto;
     border-radius: 15px;
     border: 2px solid #eee;
-    padding: .5rem;
+    padding: 1rem;
     background: linear-gradient(#BBC3C9, #51555F, #09080A);
+    /* position: fixed; */
+}
+
+
+
+@media screen and (max-width: 1281px) {
+    .fullCalc {
+        width: 53vw;
+        height: 83vh;
+    }
+
+}
+
+@media screen and (max-width: 1025px) {
+    .fullCalc {
+        width: 59vw;
+        height: 80vh;
+        margin: 0rem auto;
+    }
+
+}
+
+@media screen and (max-width: 541px) {
+    .fullCalc {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .fullCalc {
+        width: 89vw;
+        height: 88vh;
+        margin: .5rem auto;
+    }
+
+    .app {
+        height: 90vh;
+        width: 90vw;
+    }
+
+}
+
+@media screen and (max-width: 281px) {
+    .fullCalc {
+        width: 84vw;
+        height: 95vh;
+        margin: .5rem auto;
+    }
+
 }

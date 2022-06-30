@@ -21,13 +21,29 @@ const FullPage = () => {
 
   const Delete = () => {
     let n = arrNumbers.pop();
-    setFinale(n);
+    setNumber(n);
   };
 
   const minus = () => {
-    let n = arrNumbers.unshift("-1*");
-    let str = eval(n);
-    setFinale(str);
+    let l = arrNumbers.length;
+    let newArr = arrNumbers.splice(l, 0, "-");
+    let a = newArr.reduce((prev, cur) => prev + cur);
+    setArrNumbers(newArr);
+    setNumber(a);
+  };
+
+  const squareRoot = () => {
+    let n = Math.sqrt(number);
+    setNumber(n);
+  };
+
+  const Pi = () => {
+    let n = Math.PI(number);
+    setNumber(n);
+  };
+
+  const exp = () => {
+    let n = Math.E(n);
   };
 
   const handler = (e) => {
@@ -47,30 +63,30 @@ const FullPage = () => {
   };
 
   const listOfButtons = [
-    { value: 1, id: "num" },
-    { value: 2, id: "num" },
-    { value: 3, id: "num" },
-    { value: "+", id: "op" },
+    { value: 7, id: "num" },
+    { value: 8, id: "num" },
+    { value: 9, id: "num" },
+    { value: "*", id: "op" },
     { value: 4, id: "num" },
     { value: 5, id: "num" },
     { value: 6, id: "num" },
     { value: "-", id: "op" },
-    { value: 7, id: "num" },
-    { value: 8, id: "num" },
-    { value: 9, id: "num" },
-    { value: "x", id: "op" },
-    { value: 0, id: "num" },
+    { value: 1, id: "num" },
+    { value: 2, id: "num" },
+    { value: 3, id: "num" },
+    { value: "+", id: "op" },
     { value: ".", id: "op" },
+    { value: 0, id: "num" },
     { value: "%", id: "op" },
     { value: "/", id: "op" },
   ];
 
   const listOfOperations = [
     { value: "±", id: "op", onClick: minus },
-    { value: "√", id: "op" },
+    { value: "√", id: "op", onClick: squareRoot },
     { value: "(", id: "op" },
     { value: ")", id: "op" },
-    { value: "PI", id: "op" },
+    { value: "PI", id: "op", onClick: Pi },
     { value: "^", id: "op" },
     { value: "sin", id: "op" },
     { value: "cos", id: "op" },
@@ -106,8 +122,8 @@ const FullPage = () => {
       <section className={styles.display}>
         <p>{arrNumbers}</p>
         <p>{finale}</p>
-        <div className={styles.del}>{deleters}</div>
       </section>
+      <div className={styles.del}>{deleters}</div>
       <section className={styles.buttonSection}>
         <section className={styles.Numbers}>
           <div className={styles.But}>{inputs}</div>

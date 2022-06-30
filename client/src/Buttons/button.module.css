@@ -1,8 +1,18 @@
+.buttonBody1,
 .buttonBody {
-    width: 3.25rem;
-    height: 3rem;
+    width: 3.75rem;
+    height: 3.5rem;
     border-radius: 50%;
     margin: .5rem;
+}
+
+.buttonBody1 {
+    background: #e37d2f;
+    opacity: 0.2;
+}
+
+.buttonBody1 .buttonText {
+    color: #fff;
 }
 
 .button,
@@ -13,20 +23,88 @@
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(209, 213, 219, 0.3);
-    box-shadow: -1px 1px 1px #E4E7E8;
+    box-shadow: 1px -1.5px 3px -1px #e37d2f;
     color: #fff;
     border-radius: 50%;
     border: none;
     text-align: center;
 }
 
-.button1 {
-    display: none;
-}
 
 .buttonText {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
-    color: #e37d2f;
+    color: #b6b1c7;
     text-align: center;
+}
+
+/* @media screen and (min-width: 415px) {
+
+    .buttonBody1,
+    .buttonBody {
+        width: 4.5rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin: .5rem;
+    }
+
+    .buttonText {
+        font-size: 24px;
+    }
+} */
+
+@media screen and (max-width: 1281px) {
+
+    .buttonBody1,
+    .buttonBody {
+        width: 3rem;
+        height: 2.75rem;
+        border-radius: 50%;
+    }
+
+    .buttonText {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .buttonBody1,
+    .buttonBody {
+        width: 2.5rem;
+        height: 2rem;
+        border-radius: 50%;
+    }
+
+    .buttonText {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 413px) {
+
+    .buttonBody1,
+    .buttonBody {
+        width: 3.75rem;
+        height: 3.25rem;
+        border-radius: 50%;
+    }
+
+    .buttonText {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 281px) {
+
+    .buttonBody1,
+    .buttonBody {
+        width: 2.75rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+
+    .buttonText {
+        font-size: 20px;
+    }
 }
