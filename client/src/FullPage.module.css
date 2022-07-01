@@ -24,6 +24,10 @@
     /* background-color: #fff; */
 }
 
+.display::-webkit-scrollbar {
+    display: none;
+}
+
 .But,
 .But1 {
     display: grid;
