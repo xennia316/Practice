@@ -77,21 +77,25 @@ const FullPage = () => {
     { value: "+", id: "op" },
     { value: ".", id: "op" },
     { value: 0, id: "num" },
-    { value: "%", id: "op" },
+    { value: "e", id: "op" },
     { value: "/", id: "op" },
   ];
 
   const listOfOperations = [
     { value: "±", id: "op", onClick: minus },
     { value: "√", id: "op", onClick: squareRoot },
-    { value: "(", id: "op" },
-    { value: ")", id: "op" },
+    { value: "(", id: "op", onClick: handler },
+    { value: ")", id: "op", onClick: handler },
     { value: "PI", id: "op", onClick: Pi },
-    { value: "^", id: "op" },
-    { value: "sin", id: "op" },
-    { value: "cos", id: "op" },
-    { value: "tan", id: "op" },
-    { value: "|", id: "op" },
+    { value: "^", id: "op", onClick: handler },
+    { value: "sin", id: "op", onClick: handler },
+    { value: "cos", id: "op", onClick: handler },
+    { value: "tan", id: "op", onClick: handler },
+    { value: "ln", id: "op", onClick: handler },
+    { value: "log", id: "op", onClick: handler },
+    { value: "sinh", id: "op", onClick: handler },
+    { value: "cosh", id: "op", onClick: handler },
+    { value: "tanh", id: "op", onClick: handler },
   ];
 
   const deletersList = [
