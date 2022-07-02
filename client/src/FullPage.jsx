@@ -42,8 +42,9 @@ const FullPage = () => {
     setNumber(n);
   };
 
-  const exp = () => {
-    let n = Math.E(n);
+  const exp = (e) => {
+    let n = e.target.innerText
+     n = Math.E(n);
   };
 
   const handler = (e) => {
