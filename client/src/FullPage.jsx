@@ -37,8 +37,10 @@ const FullPage = () => {
     setNumber(n);
   };
 
-  const Pi = () => {
-    let n = Math.PI(number);
+  const Pi = (e) => {
+    
+    let n = e.target
+    n = Math.PI(number);
     setNumber(n);
   };
 
