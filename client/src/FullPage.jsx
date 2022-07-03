@@ -25,11 +25,11 @@ const FullPage = () => {
   };
 
   const minus = () => {
-    let l = arrNumbers.length;
-    let newArr = arrNumbers.splice(l, 0, "-");
-    let a = newArr.reduce((prev, cur) => prev + cur);
+    // let l = arrNumbers.length;
+    // let newArr = arrNumbers.splice(l, 0, "-");
+    // let a = [...arrNumbers, newArr]
+    let newArr = ["-", ...arrNumbers];
     setArrNumbers(newArr);
-    setNumber(a);
   };
 
   const squareRoot = () => {
@@ -37,9 +37,12 @@ const FullPage = () => {
     setNumber(n);
   };
 
-  const Pi = () => {
-    let n = Math.PI(number);
-    setNumber(n);
+  const Pi = (e) => {
+    e.preventDefault();
+    let newArr = [...arrNumbers, "22/7"];
+    let a = newArr.reduce((prev, curr) => prev + curr);
+    setArrNumbers(newArr);
+    setNumber(a);
   };
 
   const exp = () => {
