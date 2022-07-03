@@ -5,9 +5,7 @@ const button = (param) => {
   return (
     <div className={styles.buttonBody}>
       <button className={`num ${styles.button}`} onClick={param.onClick}>
-        <p className={styles.buttonText} onClick={param.onClick}>
-          {param.value}
-        </p>
+        <p className={styles.buttonText}>{param.value}</p>
       </button>
     </div>
   );
