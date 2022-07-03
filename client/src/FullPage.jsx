@@ -37,16 +37,16 @@ const FullPage = () => {
     setNumber(n);
   };
 
-  const Pi = (e) => {
-    e.preventDefault();
+  const Pi = () => {
     let newArr = [...arrNumbers, "22/7"];
     let a = newArr.reduce((prev, curr) => prev + curr);
     setArrNumbers(newArr);
     setNumber(a);
   };
 
-  const exp = () => {
-    let n = Math.E(n);
+  const exp = (e) => {
+    let n = e.target.innerText;
+    n = Math.E(n);
   };
 
   const handler = (e) => {
