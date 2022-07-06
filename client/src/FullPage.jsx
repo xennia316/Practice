@@ -28,13 +28,15 @@ const FullPage = () => {
     // let l = arrNumbers.length;
     // let newArr = arrNumbers.splice(l, 0, "-");
     // let a = [...arrNumbers, newArr]
-    let newArr = ["-", ...arrNumbers];
+    let newArr = [...arrNumbers, "-"];
     setArrNumbers(newArr);
   };
 
-  const squareRoot = () => {
-    let n = Math.sqrt(number);
-    setNumber(n);
+  const squareRoot = (e) => {
+    let x = this.index() + 1;
+    let inUse = arrNumbers.splice(x, 2, "(", ")");
+    let m = arrNumbers.splice(x - 1, 1, inUse);
+    setNumber(m);
   };
 
   const Pi = () => {
@@ -42,11 +44,6 @@ const FullPage = () => {
     let a = newArr.reduce((prev, curr) => prev + curr);
     setArrNumbers(newArr);
     setNumber(a);
-  };
-
-  const exp = (e) => {
-    let n = e.target.innerText;
-    n = Math.E(n);
   };
 
   const handler = (e) => {
@@ -86,7 +83,7 @@ const FullPage = () => {
 
   const listOfOperations = [
     { value: "±", id: "op", onClick: minus },
-    { value: "√", id: "op", onClick: squareRoot },
+    { value: "√", id: "op", onClick: handler, squareRoot },
     { value: "(", id: "op", onClick: handler },
     { value: ")", id: "op", onClick: handler },
     { value: "PI", id: "op", onClick: Pi },
