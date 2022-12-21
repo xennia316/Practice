@@ -1,7 +1,7 @@
 .buttonBody1,
 .buttonBody {
-    width: 3.75rem;
-    height: 3.5rem;
+    width: 6.2rem;
+    height: 5.25rem;
     border-radius: 50%;
     margin: .5rem;
 }
@@ -33,7 +33,7 @@
 
 .buttonText {
     height: 100%;
-    font-size: 18px;
+    font-size: 26px;
     font-weight: 700;
     color: #b6b1c7;
     text-align: center;
@@ -58,8 +58,8 @@
 
     .buttonBody1,
     .buttonBody {
-        width: 3rem;
-        height: 2.75rem;
+        width: 4.65rem;
+        height: 4rem;
         border-radius: 50%;
     }
 
@@ -68,12 +68,12 @@
     }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1118px) {
 
     .buttonBody1,
     .buttonBody {
-        width: 2.5rem;
-        height: 2rem;
+        width: 3.5rem;
+        height: 3.25rem;
         border-radius: 50%;
     }
 
@@ -82,15 +82,28 @@
     }
 }
 
-@media screen and (max-width: 413px) {
+@media screen and (max-width: 800px) {
 
     .buttonBody1,
     .buttonBody {
-        width: 3.75rem;
-        height: 3.25rem;
+        width: 3rem;
+        height: 2.75rem;
         border-radius: 50%;
     }
 
+    .buttonText {
+        font-size: 16px;
+    }
+    }
+    
+    @media screen and (max-width: 547px) {
+    
+        .buttonBody1,
+        .buttonBody {
+            width: 4rem;
+            height: 3.75rem;
+            border-radius: 50%;
+        }
     .buttonText {
         font-size: 20px;
     }
@@ -103,9 +116,13 @@
         width: 2.75rem;
         height: 2.5rem;
         border-radius: 50%;
+        padding: 0;
+        text-align: center;
     }
 
     .buttonText {
-        font-size: 20px;
+        font-size: 12px;
+        padding: 0;
+        text-align: center;
     }
 }
