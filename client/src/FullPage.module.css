@@ -55,6 +55,7 @@
 
 .Numbers {
     display: flex;
+    /* width: 100%; */
     justify-content: space-between;
     gap: 2rem;
     height: 60%;
@@ -109,7 +110,7 @@
     }
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1117px) {
     .Numbers {
         height: 30vh;
     }
@@ -125,9 +126,9 @@
     }
 }
 
-@media screen and (max-width: 413px) {
+@media screen and (max-width: 547px) {
     .Numbers {
-        height: 38vh;
+        height: 120%
     }
 
     .equal {
