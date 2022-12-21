@@ -1,5 +1,5 @@
 .fullCalc {
-    width: 42vw;
+    width: 50vw;
     overflow: hidden;
     height: 95vh;
     margin: 0 auto;
@@ -14,28 +14,40 @@
 
 @media screen and (max-width: 1281px) {
     .fullCalc {
-        width: 53vw;
+        margin: 3rem auto;
+        width: 60vw;
         height: 83vh;
     }
 
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1034px) {
     .fullCalc {
         width: 59vw;
         height: 80vh;
         margin: 0rem auto;
+        /* min-width: 995px; */
     }
 
 }
 
-@media screen and (max-width: 541px) {
+@media screen and (max-width: 1020px) {
     .fullCalc {
-        width: 100%;
+        width: 65vw;
+        height: 80vh;
+        margin: 0rem auto;
+        /* min-width: 995px; */
+        }
+        
+        }
+        
+        @media screen and (max-width: 547px) {
+            .fullCalc {
+                width: 60%;
     }
 }
 
-@media screen and (max-width: 413px) {
+/* @media screen and (max-width: 413px) {
     .fullCalc {
         width: 89vw;
         height: 88vh;
@@ -49,6 +61,7 @@
 
 }
 
+*/
 @media screen and (max-width: 281px) {
     .fullCalc {
         width: 84vw;
